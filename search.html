@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+      
+<head> 
+    <title> 
+        Creating Search Bar using HTML 
+        CSS and Javascript 
+    </title> 
+      
+    <!-- linking the stylesheet(CSS) -->
+    <link rel="stylesheet" type="text/css" href="./style.css"> 
+    <style>
+        #searchbar{ 
+     margin-left: 15%; 
+     padding:15px; 
+     border-radius: 10px; 
+   } 
+ 
+   input[type=text] { 
+      width: 30%; 
+      -webkit-transition: width 0.15s ease-in-out; 
+      transition: width 0.15s ease-in-out; 
+   } 
+ 
+   /* When the input field gets focus, 
+        change its width to 100% */
+   input[type=text]:focus { 
+     width: 70%; 
+   } 
+ 
+  #list{ 
+    font-size:  1.5em; 
+    margin-left: 90px; 
+   } 
+ 
+.animals{ 
+   display: list-item;     
+  }  
+    </style>
+    
+</head> 
+  
+<body> 
+    
+    <form action="search1.jsp" method="POST">
+    <!-- input tag -->
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search books.."> 
+      
+    <!-- ordered list -->
+    <ul id='list'> 
+        <a href="search1.jsp"<li class="animals">eleanor and park</li> </a>
+        <a href="search1.jsp" <li class="animals">cinder</li> </a>
+        <a href="search1.jsp"<li class="animals">the night circus</li> </a>
+        <a href="search1.jsp"<li class="animals">the book thief</li> </a>
+        <a href="search1.jsp"<li class="animals">Gone girl</li> </a>
+        <a href="search1.jsp"<li class="animals">physics</li> </a>
+        
+    </ul> 
+      
+    <!-- linking javscript -->
+    <script>
+        function search_animal() { 
+    let input = document.getElementById('searchbar').value 
+    input=input.toLowerCase(); 
+    let x = document.getElementsByClassName('animals'); 
+      
+    for (i = 0; i < x.length; i++) {  
+        if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+            x[i].style.display="none"; 
+        } 
+        else { 
+            x[i].style.display="list-item";                  
+        } 
+    } 
+} 
+    </script>
+     </form>
+    
+</body> 
+  
+</html> 

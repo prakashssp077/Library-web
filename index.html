@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>LIBRARY MANAGEMENT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+	body {
+	font-family: Arial,Helvetica, sans-serif;
+	text-align:center;
+	background: #85d6cc;
+	}
+	form {
+	margin:0 10% 0 10%;
+	border: 3px solid #f1f1f1;
+	}
+	img {
+		height:300px;
+		width:270px;
+		margin: 24px 0 12px 0;
+		}
+	
+	input{
+		width: 25%;
+		padding:12px;
+		margin: 8px ;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		border-radius: 10px;
+	}
+	button{
+		background-color: #4CAF50;
+		color: white;
+		width: 20%;
+		padding:12px;
+		margin:2px 10px 5px 80px;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.5s;
+		}
+	
+	span.psw {
+		margin:0 10% 0 3%;
+		
+		}
+               
+	a:active{
+	color:red;
+	}
+	a:hover{
+	color:#ff0000;}
+	
+	
+	
+	</style>
+
+		
+</head>
+
+<body>
+	
+	<h1 class="head" >Login Page!!</h1>
+
+	<form action="login.jsp" method="POST">
+       
+		<div class="imgcontainer">
+				<img src="library.png" alt="Avatar" class="avatar">
+		</div>
+        
+		<div class="container" >
+			
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="username">
+			<br>
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" >
+			<br>
+			<button type="submit">Login</button>
+			<br>
+                        <form action="forget.html" method="POST">
+			<span class="frg"> <a href="forget.html" target="_blank">Forget password</a></span>
+                        </form>
+                        <form action="register.jsp" method="POST">
+			<span class="reg"> <a href="register.jsp" target="_blank">Register</a></span>
+                        </form> 
+
+		</div>
+    </form>
+	
+</body>
+</html>
+
+
+
+
+
